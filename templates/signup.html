@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-style">
+    <h1>Sign Up</h1>
+    <form class="site-form" action="." method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br><br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <div class="error-message">
+        <span id="error1"></span>
+        <span id="error2"></span>
+    </div>
+</div>
+<script type="text/javascript">
+    document.getElementById("error1").innerHTML = "";
+    document.getElementById("error2").innerHTML = "";
+</script>
+{% endblock %}
